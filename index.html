@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sena Idiomas</title>
+  <style>
+    /* Resetando margens e preenchimento */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo da página */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f5;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    /* Animação do Banner */
+    .banner {
+      background-image: url('https://via.placeholder.com/1500x500');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 150px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .banner .cta-button {
+      background-color: #e67e22;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .banner .cta-button:hover {
+      background-color: #d35400;
+      transform: scale(1.1);
+    }
+
+    /* Seção de conteúdo */
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    /* Card de conteúdo */
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .card-body .cta-button {
+      background-color: #3498db;
+      padding: 12px 25px;
+      font-size: 1rem;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-body .cta-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #34495e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    /* Animações de transição */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .banner h2 {
+        font-size: 2.5rem;
+      }
+
+      .banner p {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .banner h2 {
+        font-size: 2rem;
+      }
+
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-vindo à Página Moderna</h1>
+  </header>
+
+  <section class="banner fade-in">
+    <h2>Discover the Power of Languages</h2>
+    <p>Now it's your turn! Dive into this universe of possibilities and see how learning Portuguese, Spanish, and Italian can take you beyond your dreams.</p>
+    <button class="cta-button">Descubra Mais</button>
+  </section>
+
+  <section class="content fade-in">
+    <div class="card">
+      <img src="imagens/brasilflag.jpg" alt="Card 1">
+      <div class="card-body">
+        <h3>Portuguese</h3>
+        <p>The language that carries soul, poetry, and intensity. Connect with over 260 million people around the world.</p>
+        <button class="cta-button">Saiba Mais</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagens/flags-spain.jpg" alt="Card 2">
+      <div class="card-body">
+        <h3>Spanish</h3>
+        <p>Feel the passion and energy of one of the most spoken languages on the planet, with the strength of stories that transcend generations.</p>
+        <button class="cta-button">Saiba Mais</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagens/flags-italy.jpg" alt="Card 3">
+      <div class="card-body">
+        <h3>Italian</h3>
+        <p>Experience the language of love, art, and cuisine. A language that sings as you speak.</p>
+        <a href="italiano.html"><button class="cta-button">Saiba Mais</button> </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 This page was created by Airton Sena de Souza. This is a HTML, CSS and Javascript Project.</p>
+  </footer>
+
+</body>
+</html>
